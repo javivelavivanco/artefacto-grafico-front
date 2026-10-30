@@ -1,0 +1,118 @@
+:root {
+  /* La paleta semántica mantiene coherentes los estados, superficies y controles. */
+  --font-base: 'Poppins', system-ui, sans-serif;
+
+  --color-fondo-base: #050505;
+  --color-fondo-panel: #15151E;
+  --color-superficie: #FFFFFF12;
+  --color-texto: #FFFFFF;
+  --color-texto-secundario: #BCBCBC;
+  --color-borde: #FFFFFF26;
+  --color-borde-destacado: #FFFFFF40;
+  --color-acento-cian: #00E5FF;
+  --color-boton: #007985;
+  --color-alerta: #FF8F7A;
+  --color-incidencia-aviso: #FFD166;
+  --color-prioridad-normal: #3B82FF;
+  --color-estado-finalizado: #00FF41;
+
+  --radio-control: .375rem;
+
+  color: var(--color-texto);
+  background: var(--color-fondo-base);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-base);
+}
+
+html:root,
+html:root *,
+html:root *::before,
+html:root *::after {
+  box-sizing: border-box;
+  border-width: 1px;
+}
+
+button,
+input,
+select,
+textarea {
+  min-width: 0;
+  font: inherit;
+}
+
+button:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+body {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-fondo-panel);
+  color: var(--color-texto);
+}
+
+body:has([data-fondo-panel]) {
+  background-color: var(--color-fondo-panel);
+  background-image: url('/bg-panel.svg'), url('/bg-panel-invertido.svg');
+  background-position: center bottom, center top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100vw auto, 100vw auto;
+  background-attachment: scroll;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-acento-cian);
+  outline-offset: 2px;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+select,
+textarea {
+  border-radius: var(--radio-control);
+}
+
+::selection {
+  color: var(--color-fondo-base);
+  background: var(--color-acento-cian);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html:root,
+  html:root *,
+  html:root *::before,
+  html:root *::after {
+    scroll-behavior: auto;
+    animation-duration: .01ms;
+    animation-iteration-count: 1;
+    transition-duration: .01ms;
+  }
+}

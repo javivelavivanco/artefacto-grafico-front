@@ -1,0 +1,138 @@
+.paginaAcceso {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+  background-color: var(--color-fondo-base);
+  background-image: url('/bg-inicio.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.panelAcceso {
+  width: min(100%, 520px);
+  padding: clamp(1.5rem, 5vw, 2.625rem);
+  color: var(--color-texto);
+  background: #111116E8;
+  border: 1px solid var(--color-borde);
+}
+
+.encabezadoAcceso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.125rem 0 1.75rem;
+}
+
+.iconoMarca {
+  display: block;
+  width: 10rem;
+  height: auto;
+}
+
+.encabezadoAcceso h1 {
+  margin: 0;
+  color: var(--color-texto);
+  font: 500 clamp(1.875rem, 7vw, 2.625rem)/1.1 var(--font-base);
+  letter-spacing: -.05em;
+  text-align: center;
+}
+
+.encabezadoAcceso h1 em {
+  color: var(--color-acento-cian);
+  font-style: normal;
+}
+
+.formularioAcceso {
+  width: 100%;
+}
+
+.formularioAcceso h2 {
+  margin: 0;
+  color: var(--color-texto);
+  font: 500 1.5625rem var(--font-base);
+  letter-spacing: -.04em;
+}
+
+.introduccion {
+  margin: 0.5rem 0 1.4375rem;
+  color: var(--color-texto-secundario);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.formularioAcceso form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.formularioAcceso label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+  color: var(--color-texto);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.formularioAcceso input {
+  min-height: 43px;
+  padding: 0.625rem 0.75rem;
+  color: var(--color-texto);
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde-destacado);
+  border-radius: 0.125rem;
+  font-size: 0.75rem;
+}
+
+.formularioAcceso input::placeholder {
+  color: var(--color-texto-secundario);
+}
+
+.formularioAcceso form button {
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5625rem;
+  margin-top: 0.75rem;
+  padding: 0 1rem;
+  color: var(--color-texto);
+  background: var(--color-boton);
+  border: 0;
+  border-radius: 0.1875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background .18s;
+}
+
+.formularioAcceso form button:hover {
+  color: var(--color-fondo-base);
+  background: var(--color-acento-cian);
+}
+
+.formularioAcceso form button:disabled {
+  opacity: 0.7;
+}
+
+.formularioAcceso form button img {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  object-fit: contain;
+}
+
+.formularioAcceso form button:hover img {
+  filter: brightness(0);
+}
+
+.mensajeError {
+  margin: 0 0 0.875rem;
+  padding: 0.625rem;
+  color: var(--color-alerta);
+  background: #FF8F7A21;
+  font-size: 0.6875rem;
+}
